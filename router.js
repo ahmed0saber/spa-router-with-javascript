@@ -43,7 +43,9 @@ const handleLocation = async () => {
 
     document.getElementById("main-page").innerHTML = html
     document.title = currentRoute.title
-    currentAnchorTag.classList.add("active")
+    if (currentAnchorTag) {
+        currentAnchorTag.classList.add("active")
+    }
 }
 
 window.onpopstate = handleLocation
